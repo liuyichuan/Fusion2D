@@ -42,16 +42,18 @@ public class Ball : MonoBehaviour {
 
 		if (this.transform.position.x < -7)
 			this.transform.Translate( new Vector3 (-this.transform.position.x + 7 ,0,0) );
-
-
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
 		if (col.gameObject.tag == "Coin") {
 			Destroy (col.gameObject);
 
-			GameObject temp = GameObject.FindWithTag ("UI");
-			temp.GetComponent<Score>().scoreAdd(100);
+			GameObject[] temp;
+			temp = GameObject.FindGameObjectsWithTag ("Score");
+
+			foreach (GameObject obj in temp) {
+				obj.GetComponent<Score>().score += 100;
+			}
 		}
 		if (col.gameObject.tag == "Hole") {
 
