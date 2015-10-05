@@ -42,8 +42,6 @@ public class Ball : MonoBehaviour {
 
 		if (this.transform.position.x < -7)
 			this.transform.Translate( new Vector3 (-this.transform.position.x + 7 ,0,0) );
-
-
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
@@ -52,7 +50,6 @@ public class Ball : MonoBehaviour {
 
 			GameObject[] temp;
 			temp = GameObject.FindGameObjectsWithTag ("Score");
-
 			foreach (GameObject obj in temp) {
 				obj.GetComponent<Score>().score += 100;
 			}
