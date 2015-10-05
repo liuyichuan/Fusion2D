@@ -9,6 +9,8 @@ public class Ball : MonoBehaviour {
 	public GameObject explosion;
 	public GameObject Player;
 
+	float dif = 10;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -21,8 +23,8 @@ public class Ball : MonoBehaviour {
 
 		currentHeight = this.gameObject.transform.position.y;
 
-		if (currentHeight > highestHeight) {
-			float differ = currentHeight - highestHeight;
+		if (currentHeight > highestHeight+dif) {
+			float differ = currentHeight - highestHeight-dif;
 			Camera.main.transform.Translate(0, differ, 0);
 
 			highestHeight += differ;
@@ -48,8 +50,12 @@ public class Ball : MonoBehaviour {
 		if (col.gameObject.tag == "Coin") {
 			Destroy (col.gameObject);
 
-			GameObject temp = GameObject.FindWithTag ("UI");
-			temp.GetComponent<Score>().scoreAdd(100);
+			GameObject[] temp;
+			temp = GameObject.FindGameObjectsWithTag ("Score");
+
+			foreach (GameObject obj in temp) {
+				obj.GetComponent<Score>().score += 100;
+			}
 		}
 		if (col.gameObject.tag == "Hole") {
 
@@ -63,7 +69,7 @@ public class Ball : MonoBehaviour {
 	void RespawnBall(){
 
 			
-			Instantiate (Player, new Vector3 (0, Camera.main.transform.position.y + Respawnpoint, 0), Quaternion.identity);
+			Instantiate (Player, new Vector3 (0, Camera.main.transform.position.y + Respawnpoint + dif, 0), Quaternion.identity);
 			//this.gameObject.transform.position =new Vector3(0,Camera.main.transform.position.y+Respawnpoint,0);
 
 	}
