@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 8d676f17b2af1a04881e061d11bc5bd2
+timeCreated: 1444017743
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DarkHole_Animation_0
+    21300002: DarkHole_Animation_1
+    21300004: DarkHole_Animation_2
+    21300006: DarkHole_Animation_3
+    21300008: DarkHole_Animation_4
+    21300010: DarkHole_Animation_5
+    21300012: DarkHole_Animation_6
+    21300014: DarkHole_Animation_7
+    21300016: DarkHole_Animation_8
+    21300018: DarkHole_Animation_9
+    21300020: DarkHole_Animation_10
+    21300022: DarkHole_Animation_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: DarkHole_Animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1814
+        width: 399
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkHole_Animation_1
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1849
+        width: 346
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkHole_Animation_2
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1487
+        width: 334
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkHole_Animation_3
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 1494
+        width: 282
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkHole_Animation_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1116
+        width: 261
+        height: 313
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkHole_Animation_5
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1144
+        width: 200
+        height: 257
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkHole_Animation_6
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 797
+        width: 203
+        height: 205
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkHole_Animation_7
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 818
+        width: 166
+        height: 155
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkHole_Animation_8
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 480
+        width: 119
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkHole_Animation_9
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 495
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkHole_Animation_10
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 146
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DarkHole_Animation_11
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 162
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

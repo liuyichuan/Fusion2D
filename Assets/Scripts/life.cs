@@ -46,5 +46,14 @@ public class life : MonoBehaviour {
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
+	public void backmenu()
+	{
+		losepanel.SetActive (false);
+		leavepanel.SetActive (false);
+		lifecount = 3;
+		Application.LoadLevel ("Main");
+	}
+
+
 
 }

@@ -17,7 +17,7 @@ public class Pause : MonoBehaviour {
 			if(!showpanel){
 				leavepanel.SetActive(true);
 				onPause();
-				showpanel =true;
+				showpanel =true;	
 			}
 			else if(showpanel){
 				leavepanel.SetActive(false);
@@ -41,6 +41,13 @@ public class Pause : MonoBehaviour {
 	public void Quit(){
 		Application.Quit ();
 	}     
+	public void BacktoMenu(){
+		Application.LoadLevel ("Main");
+		showpanel =false;
+		life.lifecount = 3;
+	}
+
+
  	
 
 

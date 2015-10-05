@@ -22,12 +22,18 @@ public class MainMenu : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-		if (GUI.Button (new Rect (Screen.width / 3, (Screen.height + buttonHeight) / 2,
+		if (GUI.Button (new Rect (Screen.width / 3, (Screen.height + buttonHeight) /2 - buttonHeight * 3 / 2,
 		                          buttonWidth, buttonHeight ), tart) )
 			Application.LoadLevel ("a");
 
-		if (GUI.Button (new Rect (Screen.width / 3, (Screen.height + buttonHeight) / 2 + buttonHeight * 3 / 2,
+		if (GUI.Button (new Rect (Screen.width / 3, (Screen.height + buttonHeight) / 2 ,
 		                          buttonWidth, buttonHeight ), "Highscore") )
 			Application.LoadLevel ("Highscore");
+
+		if (GUI.Button (new Rect (Screen.width / 3, (Screen.height + buttonHeight) / 2 + buttonHeight * 3 / 2,
+		                          buttonWidth, buttonHeight), "Option"))
+
+			Application.LoadLevel ("Option");
+
 	}
 }

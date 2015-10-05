@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Touch.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Ball.cs">
     <Files>
-      <File FileName="Assets\Scripts\Touch.cs" Line="156" Column="51" />
-      <File FileName="Assets\Scripts\Ball.cs" Line="28" Column="28" />
-      <File FileName="Assets\Scripts\life.cs" Line="11" Column="34" />
+      <File FileName="Assets\Scripts\life.cs" Line="41" Column="23" />
+      <File FileName="Assets\Scripts\Ball.cs" Line="70" Column="93" />
+      <File FileName="Assets\Scripts\Pause.cs" Line="36" Column="25" />
+      <File FileName="Assets\Scripts\Main Menu\MainMenu.cs" Line="27" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
