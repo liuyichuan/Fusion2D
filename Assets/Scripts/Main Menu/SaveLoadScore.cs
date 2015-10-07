@@ -15,6 +15,7 @@ public static class SaveLoadScore {
 		//Application.persistentDataPath is a string, so if you wanted you can put that into debug.log if you want to know where save games are located
 		FileStream file = File.Create (Application.persistentDataPath + "/score.sc"); //you can call it anything you want
 		bf.Serialize(file, SaveLoadScore.savedScores);
+
 		file.Close();
 	}	
 	
@@ -29,13 +30,14 @@ public static class SaveLoadScore {
 	}
 
 	public static void AddSort (int a) {
-		Load();
+		SaveLoadScore.Load();
+		SaveLoadScore.savedScores.Add(a);
+		SaveLoadScore.savedScores.Sort();
+		SaveLoadScore.savedScores.Reverse();
 
-		savedScores.Add(a);
-		savedScores.Sort();
-		savedScores.Reverse();
-		savedScores.RemoveAt (10);
+		if (SaveLoadScore.savedScores.Count > 10)
+			SaveLoadScore.savedScores.RemoveAt (10);
 
-		Save ();
+		SaveLoadScore.Save ();
 	}
 }
