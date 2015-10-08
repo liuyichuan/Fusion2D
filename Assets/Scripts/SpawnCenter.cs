@@ -9,22 +9,21 @@ public class SpawnCenter : MonoBehaviour {
 
 	public GameObject zone1;
 	public GameObject zone2;
-	public GameObject zoneBreak;
 	public GameObject zoneFinal;
-	public GameObject Player;
+	
+	public GameObject zoneBreak;
 
 
-	public int itemSpawnPosY = 0;
+	int itemSpawnPosY = 0;
 	int frequncyDown =  0;
 
 
 	//for background
-
-	public int areaCount = 1;
-	int areaCountMax = 4;
-	int areaHeight = 24;
-	public int zoneCount = 0;
-	int zoneCountMax = 6;
+	int areaCount = 1;
+	public int areaCountMax = 4;
+	public int areaHeight = 25;
+	int zoneCount = 0;
+	public int zoneCountMax = 6;
 
 
 	// Use this for initialization
@@ -37,24 +36,22 @@ public class SpawnCenter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-			if (Camera.main.transform.position.y > ((zoneCount * areaCountMax) + areaCount) * areaHeight) {
-				areaCount++;
-				if (areaCount > areaCountMax && zoneCount < zoneCountMax) {
-					areaCount = 1;
-					zoneCount++;
-				}
-				spawnBackground ();
+		if (Camera.main.transform.position.y > ((zoneCount * areaCountMax) + areaCount) * areaHeight) {
+			areaCount++;
+			if (areaCount > areaCountMax && zoneCount < zoneCountMax) {
+				areaCount = 1;
+				zoneCount++;
 			}
-			if (Camera.main.transform.position.y > itemSpawnPosY)
-				spawnItems ();
-
-
-
+			spawnBackground ();
+		}
+		if (Camera.main.transform.position.y > itemSpawnPosY)
+			spawnItems ();
 	}
 
 	
 	void spawnBackground () {
 		//the breaks between each zones
+		//to transition between zone nicely
 		if (areaCount == 1) {
 			if (zoneCount == 1) //between 1 and 2
 				Instantiate (zoneBreak, new Vector3 (0, ((zoneCount * areaCountMax) + areaCount) * areaHeight, 1), Quaternion.identity);
@@ -94,6 +91,7 @@ public class SpawnCenter : MonoBehaviour {
 	
 		if (rng <= 0 || rng >= 7-zoneCount) {
 			//frequence increase as you increase zone
+			//frequncyDown is to reduce chances of holes or obstacles to spawn too often
 
 			float x = Random.Range (-5, 5);
 

@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour {
 	public GameObject explosion;
 	public GameObject Player;
 
-	float dif = 10;
+	float dif = 5;
 
 	// Use this for initialization
 	void Start () {
@@ -37,15 +37,12 @@ public class Ball : MonoBehaviour {
 		}
 
 
-		if (this.transform.position.x > 7)
-			this.transform.Translate( new Vector3 (-this.transform.position.x - 7 ,0,0) );
-
-		if (this.transform.position.x < -7)
-			this.transform.Translate( new Vector3 (-this.transform.position.x + 7 ,0,0) );
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
 		if (col.gameObject.tag == "Coin") {
+			col.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2 (0, 0);
+			col.gameObject.GetComponent<Rigidbody2D>().mass = 0;
 			Destroy (col.gameObject);
 
 			GameObject[] temp;
@@ -62,8 +59,11 @@ public class Ball : MonoBehaviour {
 			life.lifecount-=1;
 			Destroy(this.gameObject);
 
-
 		}
+        if (col.gameObject.tag == "GTilesMagnet")
+        {
+            col.gameObject.GetComponent<Magnet>().attract();
+        }
 	}
 
 	void RespawnBall(){

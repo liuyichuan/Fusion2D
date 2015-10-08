@@ -46,20 +46,27 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AspectRatio.cs" />
      <Compile Include="Assets\Scripts\Ball.cs" />
+     <Compile Include="Assets\Scripts\Coin.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\Despawning.cs" />
+     <Compile Include="Assets\Scripts\Magnet.cs" />
      <Compile Include="Assets\Scripts\Main Menu\Highscore.cs" />
      <Compile Include="Assets\Scripts\Main Menu\LoadScenes.cs" />
      <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Main Menu\SaveLoadScore.cs" />
+     <Compile Include="Assets\Scripts\Multiple.cs" />
      <Compile Include="Assets\Scripts\Pause.cs" />
+     <Compile Include="Assets\Scripts\ScaleToScreen.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\ScoreAfter.cs" />
      <Compile Include="Assets\Scripts\SpawnCenter.cs" />
      <Compile Include="Assets\Scripts\TileList.cs" />
      <Compile Include="Assets\Scripts\Tiles.cs" />
      <Compile Include="Assets\Scripts\Touch.cs" />
      <Compile Include="Assets\Scripts\life.cs" />
+     <Compile Include="Assets\Scripts\multipleball.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

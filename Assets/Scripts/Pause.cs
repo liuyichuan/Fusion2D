@@ -16,7 +16,7 @@ public class Pause : MonoBehaviour {
 
 			if(!showpanel){
 				leavepanel.SetActive(true);
-				onPause();
+				Time.timeScale = 0;
 				showpanel =true;	
 			}
 			else if(showpanel){
@@ -29,14 +29,20 @@ public class Pause : MonoBehaviour {
 		}
 	}
 	public void onPause(){
-		pauseButton.SetActive (false);
-		resumeButton.SetActive (true);
+		leavepanel.SetActive(true);
+		showpanel =true;	
 		Time.timeScale = 0;
 	}
 	public void onResume(){
-		pauseButton.SetActive (true);
-		resumeButton.SetActive (false);
+		leavepanel.SetActive (false);
+		showpanel = false;
 		Time.timeScale = 1;
+	}
+	public void restart()
+	{
+		leavepanel.SetActive (false);
+		life.lifecount = 3;
+		Application.LoadLevel (Application.loadedLevel);
 	}
 	public void Quit(){
 		Application.Quit ();

@@ -10,4 +10,9 @@ public class LoadScenes : MonoBehaviour {
 	public void loadNextScene (string NextString) {
 		Application.LoadLevel (NextString);
 	}
+
+	public void quit()
+	{
+		Application.Quit ();
+	}
 }

@@ -8,13 +8,13 @@ public static class SaveLoadScore {
 
 	public static List<int> savedScores = new List<int>();
 
-	
 	//it's static so we can call it from anywhere
 	public static void Save() {
 		BinaryFormatter bf = new BinaryFormatter();
 		//Application.persistentDataPath is a string, so if you wanted you can put that into debug.log if you want to know where save games are located
 		FileStream file = File.Create (Application.persistentDataPath + "/score.sc"); //you can call it anything you want
 		bf.Serialize(file, SaveLoadScore.savedScores);
+
 		file.Close();
 	}	
 	
@@ -29,13 +29,19 @@ public static class SaveLoadScore {
 	}
 
 	public static void AddSort (int a) {
-		Load();
+		//loads it in case it haven't loaded once
+		//then add and sort it to highest to lowest by Sort and Reverse
+		SaveLoadScore.Load();
+		SaveLoadScore.savedScores.Add(a);
+		SaveLoadScore.savedScores.Sort();
+		SaveLoadScore.savedScores.Reverse();
 
-		savedScores.Add(a);
-		savedScores.Sort();
-		savedScores.Reverse();
-		savedScores.RemoveAt (10);
+		//if there's more than 10 scores, deletes the 11th score
+		//assuming there's no way to get 12 scores at this point
+		if (SaveLoadScore.savedScores.Count > 10)
+			SaveLoadScore.savedScores.RemoveAt (10);
 
-		Save ();
+		//then saves
+		SaveLoadScore.Save ();
 	}
 }
