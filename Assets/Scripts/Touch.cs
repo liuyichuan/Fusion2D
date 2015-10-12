@@ -83,6 +83,7 @@ public class Touch : MonoBehaviour {
 
 						//if it was a special tile, adding new one
 						if (temp.GetComponent<Tiles> ().theTileType != Tiles.TileType.TNORMAL) {
+
 							temp = GameObject.FindGameObjectWithTag ("UI");
 							temp.GetComponent<TileList> ().Shifto ();
 							temp.GetComponent<TileList> ().Addo ();
@@ -225,6 +226,5 @@ public class Touch : MonoBehaviour {
 		if(!IHateChangingTheTouchControlALotNowToDrag) {
 			seletion = false;
 		}
-
 	}
 }
