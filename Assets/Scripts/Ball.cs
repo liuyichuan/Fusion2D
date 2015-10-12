@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour {
 	public GameObject explosion;
 	public GameObject Player;
 
-	float dif = 5;
+	float dif = 7;
 
 	// Use this for initialization
 	void Start () {
@@ -33,7 +33,7 @@ public class Ball : MonoBehaviour {
 		if (Camera.main.transform.position.y - this.transform.position.y > 13) {
 			RespawnBall();
 			Destroy (this.gameObject);
-			//life.lifecount-=1;
+			life.lifecount-=1;
 		}
 
 
@@ -64,13 +64,11 @@ public class Ball : MonoBehaviour {
         {
             col.gameObject.GetComponent<Magnet>().attract();
         }
+		this.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0,10));
 	}
 
 	void RespawnBall(){
-
-			
-			Instantiate (Player, new Vector3 (0, Camera.main.transform.position.y + Respawnpoint +dif, 0), Quaternion.identity);
-			//this.gameObject.transform.position =new Vector3(0,Camera.main.transform.position.y+Respawnpoint,0);
-
+		Instantiate (Player, new Vector3 (0, Camera.main.transform.position.y + Respawnpoint +dif, 0), Quaternion.identity);
+		//this.gameObject.transform.position =new Vector3(0,Camera.main.transform.position.y+Respawnpoint,0);
 	}
 }
